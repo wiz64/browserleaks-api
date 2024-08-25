@@ -1,3 +1,4 @@
+const crypto = require("crypto")
 async function getCanvasData(hex) {
     function md5(text) {
       return crypto.createHash('md5').update(text).digest('hex');
@@ -76,7 +77,7 @@ if (rnd) {
     
         // Step 4: Perform API fetch request
         try {
-            const response = await fetch(`/api/canvas/${hash}`, {
+            const response = await fetch(`https://browserleaks.com/api/canvas/${hash}`, {
                 headers: {
                     rnd: rnd
                 }
@@ -95,6 +96,8 @@ if (rnd) {
   let a = await processAndFetch(hex);
 
   console.log(a);
+  return a;
+
 } else {
   console.error("rnd value not found");
 }
