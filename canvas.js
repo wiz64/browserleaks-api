@@ -95,7 +95,7 @@ if (rnd) {
   // Second request using the extracted rnd value
   let a = await processAndFetch(hex);
 
-  console.log(a);
+  //console.log(a);
   return a;
 
 } else {
