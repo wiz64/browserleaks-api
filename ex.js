@@ -3,5 +3,6 @@ let hex = "646174613a696d6167652f706e673b6261736536342c6956424f5277304b47676f414
 
 async function main() {
 let a = await canvas.getCanvasData(hex);
+console.log(a)
 }
 main()
