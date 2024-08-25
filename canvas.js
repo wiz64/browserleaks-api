@@ -1,4 +1,7 @@
 async function getCanvasData(hex) {
+    function md5(text) {
+      return crypto.createHash('md5').update(text).digest('hex');
+    }
     function hex2string(hex) {
         let str = '';
         for (let i = 0; i < hex.length; i += 2) {
